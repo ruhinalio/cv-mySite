@@ -6,6 +6,9 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-image: url(../images/bg-picture.jpg);
@@ -34,10 +37,13 @@ body {
 .header .container {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-color: rgba(255, 0, 0, 0.281);
 }
 .header .container h2 {
-  cursor: none;
+  cursor: pointer;
   font-size: x-large;
   color: #fff;
 }
@@ -241,8 +247,13 @@ body {
   text-align: center;
   color: #fff;
 }
+.contact .container .contact-side {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
 .contact .container .contact-side-left {
-  width: 50%;
+  width: 48%;
 }
 .contact .container .contact-side-left form {
   display: flex;
@@ -252,7 +263,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 .contact .container .contact-side-left form p span {
   width: 50%;
@@ -279,6 +290,30 @@ body {
   box-shadow: 0px 0px 16px 13px rgba(255, 0, 0, 0.28);
   -webkit-box-shadow: 0px 0px 16px 13px rgba(255, 0, 0, 0.28);
   -moz-box-shadow: 0px 0px 16px 13px rgba(255, 0, 0, 0.28);
+}
+.contact .container .contact-side-right {
+  width: 48%;
+}
+.contact .container .contact-side-right-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.contact .container .contact-side-right-top p {
+  width: 30%;
+}
+.contact .container .contact-side-right-top p a img {
+  width: 100px;
+}
+.contact .container .contact-side-right-bottom {
+  display: flex;
+  justify-content: center;
+}
+.contact .container .contact-side-right-bottom p {
+  width: 30%;
+}
+.contact .container .contact-side-right-bottom p a img {
+  width: 100px;
 }
 
 .header .container h2, .header .container nav ul li a, .introduce .container .introduce-side .introduce-side-left p, .introduce .container .introduce-side .introduce-side-right #clock, .about .container .about-side-right h3, .portfolio .container h3, .contact .container .contact-side-left form button {

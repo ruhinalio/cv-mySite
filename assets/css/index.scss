@@ -4,18 +4,17 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-:root {
+
   $primary-color: #000;
   $background-color: rgba(0, 0, 0, 0.858);
   $text-color: #3c3f64;
-}
+
 
 body {
   background-image: url(../images/bg-picture.jpg);
@@ -42,10 +41,13 @@ body {
   .container {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background-color: rgba(255, 0, 0, 0.281);
 
     h2 {
-      cursor: none;
+      cursor: pointer;
       font-size: x-large;
       color: #fff;
       @extend %arbuts;
@@ -313,8 +315,11 @@ body {
       color: #fff;
     }
     .contact-side {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
       &-left {
-        width: 50%;
+        width: 48%;
         form {
           display: flex;
           flex-direction: column;
@@ -323,7 +328,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 20px 0;
+        margin-bottom: 20px;
             span {
               width: 50%;
               text-align: center;
@@ -355,6 +360,38 @@ body {
           }
         }
       }
+      &-right {
+        width: 48%;
+        
+        &-top {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+          p {
+            width: 30%;
+            a {
+              img {
+                width: 100px;
+              }
+            
+            }
+          }
+        }
+        &-bottom{
+          display: flex;
+          justify-content: center;
+          p {
+            width: 30%;
+            a {
+              img {
+                width: 100px;
+              }
+             
+            }
+          }
+        }
+      }
+    
     }
   }
 }
