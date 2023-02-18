@@ -10,12 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-  $primary-color: #000;
-  $background-color: rgba(0, 0, 0, 0.858);
-  $text-color: #3c3f64;
-
-
 body {
   background-image: url(../images/bg-picture.jpg);
   background-size: cover;
@@ -23,11 +17,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+// !sabit olan class yerine her defesinde her sectionun icinde bir container classi acmisam
 .container {
   max-width: 1400px;
   padding: 0 2rem;
   margin: 0 auto;
 }
+// header start is here
 .header {
   padding: 2rem 0;
   position: fixed;
@@ -52,7 +48,13 @@ body {
       color: #fff;
       @extend %arbuts;
     }
-    nav {
+    i{
+      font-size: xx-large;
+      color: #fff;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: none;
       ul {
         display: flex;
         gap: 20px;
@@ -70,8 +72,16 @@ body {
         }
       }
     }
+    .overlay-nav{
+      display: none;
+    }
+    .hamburger-menu{
+      display: none;
+    }
   }
 }
+// header end here
+//! introduce starts is here
 .introduce {
   padding-top: 5rem;
   height: 800px;
@@ -112,6 +122,8 @@ body {
     }
   }
 }
+//introduce end here
+//!about start is here
 .about {
   padding: 4rem 0;
   background-color: #000;
@@ -146,6 +158,8 @@ body {
     }
   }
 }
+// about end here
+//!portfolio start is here
 .portfolio {
   font: normal 16px/1.5 "Titillium Web", sans-serif;
   // background: $background-color;
@@ -306,8 +320,10 @@ body {
     }
   }
 }
+//portofilo end here
+//! contact start is here
 .contact {
-  margin-bottom: 300px;
+  margin-bottom: 50px;
   .container {
     h3 {
       font-size: 45px;
@@ -366,12 +382,13 @@ body {
         &-top {
           display: flex;
           justify-content: center;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
           p {
-            width: 30%;
+          
             a {
               img {
                 width: 100px;
+                margin: 5px;
               }
             
             }
@@ -381,10 +398,11 @@ body {
           display: flex;
           justify-content: center;
           p {
-            width: 30%;
+          
             a {
               img {
                 width: 100px;
+                margin: 5px;
               }
              
             }
@@ -395,6 +413,112 @@ body {
     }
   }
 }
+//contact end here
+//! footer start is here
+.footer{
+  background-color: #000;
+  width: 100%;
+  .container{
+    p{
+      display: flex;
+      justify-content: center;
+      span{
+        margin: 1rem 1rem;
+        color: #fff;
+        @extend %unbounded;
+      }
+    }
+  }
+}
+//footer and page styles end is here
+
+@media only screen and (max-width:991px){
+.introduce{
+  padding: 0;
+  height: 750px;
+  .container{
+    .introduce-side{
+      &-left{
+        .top{
+          height: 0;
+        }
+      }
+      &-right{
+        #clock{
+          display: none;
+        }
+      }
+    }
+  }
+}
+}
+@media only screen and(max-width:768px){
+  .about{
+    .container{
+      .about-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-left{
+          img{
+            width: 300px;
+            height: 423px;
+            margin: 0 auto;
+          }
+        }
+        &-right{
+          h3{
+            font-size: xx-large;
+          }
+          p{
+            font-size: x-large;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .contact{
+    .container{
+      h3{
+        font-size: xx-large;
+      }
+      .contact-side{
+        display: flex;
+        flex-direction: column;
+        gap: 50px 0;
+        margin: 0;
+        &-left{
+          width: 100%;
+        }
+        &-right{
+          width: 100%;
+          margin: 0 auto;
+          &-top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+          &-bottom{
+            display: flex;
+            justify-content: space-evenly;
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    .container{
+      p{
+        display: flex;
+        flex-direction: column;
+        span{
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+}
 %arbuts {
   font-family: "Arbutus", cursive;
   font-weight: 400;
@@ -402,3 +526,6 @@ body {
 %unbounded {
   font-family: "Unbounded", cursive;
 }
+$primary-color: #000;
+  $background-color: rgba(0, 0, 0, 0.858);
+  $text-color: #3c3f64;

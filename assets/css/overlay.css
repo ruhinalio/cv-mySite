@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.side-margin {
+  margin-left: 250px;
+}
+.side-margin a {
+  color: #000;
+}
+
+.offcanvas {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  background-image: url(../images/bg-picture.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.offcanvas .bos {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-color: rgba(255, 0, 0, 0.281);
+}
+.offcanvas .bos i {
+  color: #fff;
+  font-size: xx-large;
+  float: right;
+}
+.offcanvas nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.offcanvas nav a {
+  color: #fff;
+  font-size: x-large;
+  font-family: "Arbutus", cursive;
+  font-weight: 400;
+}
+.offcanvas nav a:hover {
+  background-color: rgba(252, 0, 0, 0.75);
+  text-decoration: line-through;
+  box-shadow: 0px 0px 13px 7px rgba(252, 0, 0, 0.75);
+}/*# sourceMappingURL=overlay.css.map */

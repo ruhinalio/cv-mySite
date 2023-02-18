@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font link -->
     <link
       href="https://fonts.googleapis.com/css2?family=Arbutus&family=Unbounded:wght@400;700&display=swap"
@@ -12,6 +14,7 @@
     />
     <!-- css links -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/overlay.css">
     <title>Document</title>
   </head>
   <body>
@@ -19,15 +22,30 @@
     <header class="header">
       <div class="container">
         <h2 class="logo">RUHIN ALIO</h2>
-
+<i class="fa-solid fa-bars" id="burger-icon"></i>
         <nav class="nav-links">
-          <ul>
+          <ul id="navbar">
             <li><a href="#home">home</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#portofilo">portofilo</a></li>
             <li><a href="#">contact</a></li>
           </ul>
         </nav>
+        <div class="offcanvas" id="overlay-menu">
+          <div class="bos">
+            <p></p>
+          <i class="fa-solid fa-xmark" id="overlay-exit"></i>
+
+          </div>
+          <nav>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#portofilo">portofilo</a>
+            <a href="#">contact</a>
+            
+          </nav>
+        </div>
+       
       </div>
     </header>
     <section class="introduce" id="home">
@@ -130,73 +148,64 @@
           <div class="contact-side-right">
             <div class="contact-side-right-top">
               <p class="contact-with-me">
-                <a href="#">
+                <a href="https://github.com/ruhinalio">
                   <img
                     src="./assets/images/contact-image/github.png"
                     alt="github"
                   />
                   <br />
-                  </a
-                >
+                </a>
               </p>
               <p class="contact-with-me">
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/ruhin.alio/?igshid=NzAzN2Q1NTE%3D"
+                >
                   <img
                     src="./assets/images/contact-image/instagram.png"
                     alt="instagram"
                   />
                   <br />
-                  </a
-                >
+                </a>
               </p>
             </div>
             <div class="contact-side-right-bottom">
               <p class="contact-with-me">
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/in/ruhin-alimardan-o%C4%9Flu-89b828226"
+                >
                   <img
                     src="./assets/images/contact-image/linkedin.png"
                     alt="linkedin"
                   />
                   <br />
-                  </a
-                >
+                </a>
               </p>
               <p class="contact-with-me">
-                <a href="#">
+                <a href="https://medium.com/@ruhinelimerdanoglu">
                   <img
                     src="./assets/images/contact-image/medium.png"
                     alt="medium"
                   />
                   <br />
-                  </a
-                >
+                </a>
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <span>phone: +994702606686</span>
+          <span>mail: ruhin.alio99@icloud.com</span>
+          <span>adress: Baku citiy</span>
+        </p>
+        <p>
+          <span>All rights reserved ®</span>
+        </p>
+      </div>
+    </footer>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
-
-
-<!-- 
-&-right {
-  display: flex;
-  // justify-content: space-between;
-  &-top {
-   
-    p {
-      width: 30%;
-      a {
-        img {
-          width: 300px;
-        }
-        span {
-          font-size: xx-large;
-        }
-      }
-    }
-  }
-} -->

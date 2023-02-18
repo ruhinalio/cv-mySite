@@ -47,18 +47,32 @@ body {
   font-size: x-large;
   color: #fff;
 }
-.header .container nav ul {
+.header .container i {
+  font-size: xx-large;
+  color: #fff;
+  cursor: pointer;
+}
+.header .container .nav-links {
+  display: none;
+}
+.header .container .nav-links ul {
   display: flex;
   gap: 20px;
 }
-.header .container nav ul li a {
+.header .container .nav-links ul li a {
   font-size: large;
   color: #fff;
 }
-.header .container nav ul li :hover {
+.header .container .nav-links ul li :hover {
   background-color: rgba(252, 0, 0, 0.75);
   text-decoration: line-through;
   box-shadow: 0px 0px 13px 7px rgba(252, 0, 0, 0.75);
+}
+.header .container .overlay-nav {
+  display: none;
+}
+.header .container .hamburger-menu {
+  display: none;
 }
 
 .introduce {
@@ -240,7 +254,7 @@ body {
 }
 
 .contact {
-  margin-bottom: 300px;
+  margin-bottom: 50px;
 }
 .contact .container h3 {
   font-size: 45px;
@@ -297,30 +311,102 @@ body {
 .contact .container .contact-side-right-top {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-}
-.contact .container .contact-side-right-top p {
-  width: 30%;
+  margin-bottom: 10px;
 }
 .contact .container .contact-side-right-top p a img {
   width: 100px;
+  margin: 5px;
 }
 .contact .container .contact-side-right-bottom {
   display: flex;
   justify-content: center;
 }
-.contact .container .contact-side-right-bottom p {
-  width: 30%;
-}
 .contact .container .contact-side-right-bottom p a img {
   width: 100px;
+  margin: 5px;
 }
 
-.header .container h2, .header .container nav ul li a, .introduce .container .introduce-side .introduce-side-left p, .introduce .container .introduce-side .introduce-side-right #clock, .about .container .about-side-right h3, .portfolio .container h3, .contact .container .contact-side-left form button {
+.footer {
+  background-color: #000;
+  width: 100%;
+}
+.footer .container p {
+  display: flex;
+  justify-content: center;
+}
+.footer .container p span {
+  margin: 1rem 1rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 991px) {
+  .introduce {
+    padding: 0;
+    height: 750px;
+  }
+  .introduce .container .introduce-side-left .top {
+    height: 0;
+  }
+  .introduce .container .introduce-side-right #clock {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about .container .about-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about .container .about-side-left img {
+    width: 300px;
+    height: 423px;
+    margin: 0 auto;
+  }
+  .about .container .about-side-right h3 {
+    font-size: xx-large;
+  }
+  .about .container .about-side-right p {
+    font-size: x-large;
+    text-align: center;
+  }
+  .contact .container h3 {
+    font-size: xx-large;
+  }
+  .contact .container .contact-side {
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+    margin: 0;
+  }
+  .contact .container .contact-side-left {
+    width: 100%;
+  }
+  .contact .container .contact-side-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact .container .contact-side-right-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact .container .contact-side-right-bottom {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer .container p {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .container p span {
+    margin: 10px auto;
+  }
+}
+.header .container h2, .header .container .nav-links ul li a, .introduce .container .introduce-side .introduce-side-left p, .introduce .container .introduce-side .introduce-side-right #clock, .about .container .about-side-right h3, .portfolio .container h3, .contact .container .contact-side-left form button {
   font-family: "Arbutus", cursive;
   font-weight: 400;
 }
 
-.about .container .about-side-right P, .contact .container .contact-side-left form p span {
+.about .container .about-side-right P, .contact .container .contact-side-left form p span, .footer .container p span {
   font-family: "Unbounded", cursive;
 }/*# sourceMappingURL=index.css.map */
